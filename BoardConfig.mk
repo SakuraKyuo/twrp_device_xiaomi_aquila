@@ -93,11 +93,9 @@ BOARD_AVB_ENABLE := true
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 
 # Crypto
-# TW_INCLUDE_CRYPTO := true
-# TW_INCLUDE_FBE := true
-# TW_INCLUDE_CRYPTO_FBE := true
-# TARGET_HW_DISK_ENCRYPTION := true
-# TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
+TW_INCLUDE_CRYPTO := true
+BOARD_USES_QCOM_FBE_DECRYPTION := true
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi

@@ -22,13 +22,18 @@ $(call inherit-product, build/target/product/embedded.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Encryption
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := omni_aquila
 PRODUCT_DEVICE := aquila
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Aquila
 PRODUCT_MANUFACTURER := Xiaomi
-
+    
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
